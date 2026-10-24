@@ -6,7 +6,7 @@
  */
 
 /* ---- Server list + folders: NotAnotherAnimeTheme v3 base, vendored (pinned copy, nothing fetched) ---- */
-:root {
+:root, .theme-dark, .theme-darker {
   --theme-background-image: var(--sumi-wall);
   --main-theme-color: #eceef2;
   --theme-transparency: transparent;
@@ -33,7 +33,7 @@
 __NAAT__
 
 
-:root {
+:root, .theme-dark, .theme-darker {
   --sumi-accent: #eceef2;
   --sumi-accent-hi: #ffffff;
   /* Discord paints bot tags etc. with brand fill + white text, so brand fills must stay mid-tone, never white */
@@ -111,7 +111,7 @@ nav:is([class^="wrapper_"], [class*=" wrapper_"]),
 
 
 /* System font (Maple Mono NF CN, same as GTK + ghostty) */
-:root {
+:root, .theme-dark, .theme-darker {
   --sumi-font: "Maple Mono NF CN", "Maple Mono NF", "Adwaita Mono", "DejaVu Sans", "Inter", monospace;
   --font-primary: var(--sumi-font);
   --font-display: var(--sumi-font);
@@ -150,7 +150,7 @@ body, button, input, textarea, select { font-family: var(--sumi-font); }
 /* Performance: no backdrop blur anywhere (every blurred panel re-blurs the wallpaper each frame).
    Glass is a bit more opaque instead so text stays readable. */
 *, *::before, *::after { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
-:root {
+:root, .theme-dark, .theme-darker {
   --sumi-glass: rgba(24, 25, 28, 0.60);
   --sumi-glass-deep: rgba(12, 13, 15, 0.74);
 }
@@ -171,7 +171,7 @@ body, button, input, textarea, select { font-family: var(--sumi-font); }
 .vc-spotify-button.vc-spotify-shuffle, .vc-spotify-button.vc-spotify-repeat { background: var(--sumi-accent-dim); }
 
 /* Remaining blurple (player progress, primary buttons) -> accent green */
-:root {
+:root, .theme-dark, .theme-darker {
   --background-brand: var(--sumi-brand-fill);
   --background-brand-hover: var(--sumi-brand-fill-hover);
   --button-filled-brand-background: var(--sumi-brand-fill);
@@ -249,7 +249,7 @@ foreignObject:has(> .wrapper__6e9f8 > .childWrapperNoHoverBg__6e9f8 > svg) { mas
 
 /* Every other modal (Manage Accounts, confirmations, forms): dense blurred glass.
    The settings window (has the sidebar) keeps its wallpaper treatment; the image viewer is left alone. */
-:is([class^="modal_"], [class*=" modal_"]):not(:has([class*="sidebar_"])):not(:has([class*="imageWrapper_"], [class*="carousel"], video)) {
+:is([class^="modal_"], [class*=" modal_"]):not(:has([class*="sidebar_"])) {
   -webkit-backdrop-filter: blur(18px) saturate(1.2) !important;
   backdrop-filter: blur(18px) saturate(1.2) !important;
   background-color: rgba(20, 21, 25, 0.88) !important;
@@ -259,7 +259,7 @@ foreignObject:has(> .wrapper__6e9f8 > .childWrapperNoHoverBg__6e9f8 > svg) { mas
 }
 
 /* Same dense glass for dialogs built on the container + size-* wrapper (Manage Accounts, confirmations) */
-:is([class^="container_"], [class*=" container_"]):is([class*=" size-"]):not(:has([class*="sidebar_"])):not(:has([class*="imageWrapper_"], [class*="carousel"], video)) {
+:is([class^="container_"], [class*=" container_"]):is([class*=" size-"]):not(:has([class*="sidebar_"])) {
   -webkit-backdrop-filter: blur(18px) saturate(1.2) !important;
   backdrop-filter: blur(18px) saturate(1.2) !important;
   background-color: rgba(20, 21, 25, 0.88) !important;
@@ -281,3 +281,44 @@ foreignObject:has(> .wrapper__6e9f8 > .childWrapperNoHoverBg__6e9f8 > svg) { mas
 /* Vencord toggles: ON is clearly white, OFF is a dim glass pill (brand fill is a mid slate, which made them look identical) */
 .vc-switch-container { background-color: rgba(255, 255, 255, 0.16) !important; }
 .vc-switch-container.vc-switch-checked { background-color: var(--sumi-accent) !important; }
+
+/* Discord's green (Join buttons, success banners, "Reconnect") -> white with dark text, like the rest of the accents */
+:root, .theme-dark, .theme-darker {
+  --status-positive-background: var(--sumi-accent);
+  --status-positive-text: #0e0f11;
+  --button-positive-background: var(--sumi-accent);
+  --button-positive-background-hover: var(--sumi-accent-hi);
+  --button-positive-text: #0e0f11;
+}
+button:is([class*=" colorGreen_"], [class^="colorGreen_"]) { background-color: var(--sumi-accent) !important; color: #0e0f11 !important; }
+button:is([class*=" colorGreen_"], [class^="colorGreen_"]):hover { background-color: var(--sumi-accent-hi) !important; }
+:root, .theme-dark, .theme-darker {
+  --notice-background-positive: rgba(255, 255, 255, 0.16);
+  --notice-text-positive: #f2f3f5;
+  --toast-success-background: rgba(255, 255, 255, 0.14);
+  --toast-success-border: rgba(255, 255, 255, 0.4);
+  --badge-success-background: var(--sumi-accent);
+  --badge-success-text: #0e0f11;
+}
+:root, .theme-dark, .theme-darker {
+  --control-connected-background-default: var(--sumi-accent);
+  --control-connected-background-hover: var(--sumi-accent-hi);
+  --control-connected-background-active: #d5d8df;
+  --control-connected-border-default: rgba(255, 255, 255, 0.45);
+  --control-connected-border-hover: #ffffff;
+  --control-connected-border-active: #ffffff;
+}
+
+/* Inbox, pinned messages and the threads browser: Discord paints these solid gray; match the other popups */
+:is(
+  [class^="messagesPopoutWrap_"], [class*=" messagesPopoutWrap_"],
+  [class^="browser_"], [class*=" browser_"],
+  [class*="widerInbox"]
+) {
+  -webkit-backdrop-filter: blur(18px) saturate(1.2) !important;
+  backdrop-filter: blur(18px) saturate(1.2) !important;
+  background-color: rgba(20, 21, 25, 0.86) !important;
+  border: 1px solid var(--sumi-edge);
+  border-radius: 12px;
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.5);
+}

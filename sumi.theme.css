@@ -6,7 +6,7 @@
  */
 
 /* ---- Server list + folders: NotAnotherAnimeTheme v3 base, vendored (pinned copy, nothing fetched) ---- */
-:root {
+:root, .theme-dark, .theme-darker {
   --theme-background-image: var(--sumi-wall);
   --main-theme-color: #eceef2;
   --theme-transparency: transparent;
@@ -33,7 +33,7 @@
 .appMount__51fd7{background:0 0;background-image:var(--theme-background-image);background-size:cover}.app__160d8{background:0 0}.bg__960e4{background:var(--theme-transparency)}.wrapper_ef3116{background:0 0}.panels__5e434{background:var(--message-box-transparency);backdrop-filter:blur(5px)}.sidebar_c48ade:after{background:0 0}.container__2637a{background:0 0}.chat_f75fb0{background:0 0}.chatContent_f75fb0{background:0 0}.themed__9293f{background:0 0}.container_c8ffbb{background:0 0}.members_c8ffbb{background:0 0}.channelTextArea_f75fb0{background:var(--message-box-transparency)}.themedBackground__74017{background:0 0}.privateChannels__35e86{background:0 0}.scroller__99e7c{background:0 0}.children__9293f:after{background:0 0}.wrapper_ef3116{width:var(--server-listing-width)}.itemsContainer_ef3116{width:calc(var(--server-listing-width) + 6px)}.wrapper_ef3116 .scroller_ef3116{display:flex;flex-flow:row wrap;padding-left:0;align-content:flex-start}.tree_ef3116 .stack_dbd263{display:flex!important;flex-flow:row wrap!important;justify-content:center!important}.stack_dbd263 .listItem__650eb:not(.wrapper__48112 .listItem__650eb){width:initial;padding:1px;margin:2px}.stack_dbd263 .wrapper__48112 .listItem__650eb{width:initial}.scroller_ef3116>.listItem__650eb{width:100%}.listItem-GuPuDH{width:auto;margin-left:0}.wrapper-21YSNc{position:relative;width:auto}@keyframes rainbow{0%{-webkit-filter:hue-rotate(0);-moz-filter:hue-rotate(0);-ms-filter:hue-rotate(0);filter:hue-rotate(0)}100%{-webkit-filter:hue-rotate(360deg);-moz-filter:hue-rotate(360deg);-ms-filter:hue-rotate(360deg);filter:hue-rotate(360deg)}}.wrapper__58105{overflow:visible!important}.wrapper__58105.overlay__58105{width:100%!important}.overlay__58105{top:initial!important}.item__58105{animation:var(--unread-server-animation)3s linear infinite;border:2px solid var(--main-theme-color);background:0 0;display:block;border-radius:30%!important;position:absolute;transform:none!important;inset:0!important;top:-2px!important;left:2px!important;width:100%;height:100%!important}#guild-list-unread-dms .item__58105{display:none!important}.item__58105.hovered__58105{display:none!important}.item__58105.selected__58105{display:none!important}.tutorialContainer__1f388 .item__58105{display:none!important}.stack_dbd263.scroller_ef3116.none_d125d2.scrollerBase_d125d2{justify-content:center}.itemsContainer_ef3116 .stack_dbd263{display:flex!important;flex-direction:column!important;flex-flow:row wrap!important;align-items:flex-start!important}.wrapper__67dba .stack_dbd263{display:initial!important;flex-direction:initial!important;flex-flow:initial!important;align-items:initial!important}.tutorialContainer__1f388{display:flex;justify-content:center;width:100%}.stack_dbd263 .wrapper__48112{width:fit-content!important}.stack_dbd263.scroller_ef3116.none_d125d2.scrollerBase_d125d2>.listItem__650eb{margin-bottom:8px;width:80%;display:flex;flex-direction:row;flex-flow:row wrap;justify-content:flex-start;align-items:flex-start}.stack_dbd263.scroller_ef3116.none_d125d2.scrollerBase_d125d2:last-child .listItem__650eb{width:initial}.stack_dbd263.scroller_ef3116.none_d125d2.scrollerBase_d125d2:last-child .listItem__650eb .pill__5bc7e{display:none!important}.wrapper__48112.isExpanded__48112 .listItem__650eb{width:100%!important}.stack_dbd263.scroller_ef3116.none_d125d2.scrollerBase_d125d2>div .listItem__650eb .pill_ed9a5f.wrapper__58105{display:none!important}.wrapper__48112.isExpanded__48112 .stack_dbd263{height:fit-content!important;display:flex!important;flex-direction:column!important}.wrapper__48112.isExpanded__48112 .listItem__650eb{width:100%}.wrapper__48112.isExpanded__48112 .stack_dbd263 .listItem__650eb .pill_e5445c.wrapper__58105 .item__58105{width:85%!important;height:100%!important;left:5px!important;top:-2px!important}.wrapper__48112.isExpanded__48112 .stack_dbd263{overflow:visible}.expandedFolderBackground__48112{left:0}.tutorialContainer__1f388 .listItem__650eb .pill__1f388.wrapper__58105{display:none}.wrapper__6e9f8 .childWrapper__6e9f8.childWrapperNoHoverBg__6e9f8 svg{display:none}.listItemWrapper__91816 .wrapper_cc5dd2 .wrapper__6e9f8 .childWrapper__6e9f8.childWrapperNoHoverBg__6e9f8{background-image:var(--home-icon-image);background-size:var(--home-icon-image-zoom);background-position:var(--home-icon-image-position);background-repeat:no-repeat}.tutorialContainer__1f388 .wrapper_cc5dd2 .wrapper__6e9f8 .childWrapper__6e9f8.childWrapperNoHoverBg__6e9f8{background-color:initial}.folderGroup__48112{width:54px!important}.folderGroup__48112:not(.isExpanded__48112) .listItem__650eb .pill_e5445c.wrapper__58105 .item__58105{margin-left:-3px!important;width:48px!important}.stack_dbd263.folderGuildsList__48112{gap:0!important}.folderGroupBackground__48112{left:3px}.unreadMentionsIndicatorTop_ef3116{justify-self:center}.wrapper_ef3116 .scroller_ef3116{justify-content:center}.tabBody__133bf{background:0 0}.container__133bf{background:0 0}.member_c8ffbb{background-color:initial}.nowPlayingColumn__133bf{background-color:initial}.container__7d20c{background-color:initial}.wrapper_d852db{background:0 0}.wrapper_fc8177{background:0 0}.standardSidebarView__23e6b{background:0 0}.sidebarRegionScroller__23e6b{background:0 0}.layer__960e4{background:0 0}.contentRegion__23e6b{background:0 0}.contentRegionScroller__23e6b{background-color:initial}.channelAttachmentArea_b77158{background-color:initial}.upload_aa605f{background-color:initial}.guildSeparator__252b6{display:none}.searchBar__5ec2f{background-color:initial;backdrop-filter:blur(5px)}.itemCard__7e549.wrapper__00943.outer_bf1984.padded_bf1984.interactive_bf1984{background-color:initial;backdrop-filter:blur(5px)}.embedFull__623de{background-color:initial!important;backdrop-filter:blur(5px)}.footer__4d95d{background:0 0;backdrop-filter:blur(5px)}.textContainer__4d95d{background-color:initial;backdrop-filter:blur(15px)!important}.codeView__4d95d{background-color:initial}.container__0f2e8{background-color:initial!important;backdrop-filter:blur(5px)}.panel__5dec7{background-color:initial!important}.scroller__28a87{background-color:initial}.root_bfe55a{background:0 0}.wrapper_cb9592{background:0 0}.callContainer_cb9592{background:0 0}.resizeHandle__01ae2{background:0 0}.container__01ae2{background:0 0;backdrop-filter:blur(5px)}.chatLayerWrapper__01ae2{background:0 0}.channelChatWrapper_cb9592{background:0 0}.container_f369db{background:0 0}.mainCard_f369db{background:0 0;backdrop-filter:blur(5px)}.container_faa96b:hover{background:0 0;backdrop-filter:blur(15px)}.membersWrap_c8ffbb{background-color:initial}.privateChannels_e6b769{background:0 0}.chatGradient__36d07{background:0 0}.chatTypingGradientAtBottom__36d07,.chatTypingGradientNotAtBottom__36d07{background:0 0}.themed__9293f{background:0 0!important}.sidebar__5e434:after{background:0 0}.chatGradient__36d07{background:0 0}#guild-list-unread-dms .pill_ed9a5f{display:none}.titleContainer_e29cd7{background-color:initial}.header_c6bf1b{background-color:initial}.scroller__53543{background-color:initial}.chatTypingGradientNotAtBottom__36d07{background:0 0}.chatTypingGradientAtBottom__36d07{background:0 0}
 
 
-:root {
+:root, .theme-dark, .theme-darker {
   --sumi-accent: #eceef2;
   --sumi-accent-hi: #ffffff;
   /* Discord paints bot tags etc. with brand fill + white text, so brand fills must stay mid-tone, never white */
@@ -111,7 +111,7 @@ nav:is([class^="wrapper_"], [class*=" wrapper_"]),
 
 
 /* System font (Maple Mono NF CN, same as GTK + ghostty) */
-:root {
+:root, .theme-dark, .theme-darker {
   --sumi-font: "Maple Mono NF CN", "Maple Mono NF", "Adwaita Mono", "DejaVu Sans", "Inter", monospace;
   --font-primary: var(--sumi-font);
   --font-display: var(--sumi-font);
@@ -150,7 +150,7 @@ body, button, input, textarea, select { font-family: var(--sumi-font); }
 /* Performance: no backdrop blur anywhere (every blurred panel re-blurs the wallpaper each frame).
    Glass is a bit more opaque instead so text stays readable. */
 *, *::before, *::after { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
-:root {
+:root, .theme-dark, .theme-darker {
   --sumi-glass: rgba(24, 25, 28, 0.60);
   --sumi-glass-deep: rgba(12, 13, 15, 0.74);
 }
@@ -171,7 +171,7 @@ body, button, input, textarea, select { font-family: var(--sumi-font); }
 .vc-spotify-button.vc-spotify-shuffle, .vc-spotify-button.vc-spotify-repeat { background: var(--sumi-accent-dim); }
 
 /* Remaining blurple (player progress, primary buttons) -> accent green */
-:root {
+:root, .theme-dark, .theme-darker {
   --background-brand: var(--sumi-brand-fill);
   --background-brand-hover: var(--sumi-brand-fill-hover);
   --button-filled-brand-background: var(--sumi-brand-fill);
@@ -249,7 +249,7 @@ foreignObject:has(> .wrapper__6e9f8 > .childWrapperNoHoverBg__6e9f8 > svg) { mas
 
 /* Every other modal (Manage Accounts, confirmations, forms): dense blurred glass.
    The settings window (has the sidebar) keeps its wallpaper treatment; the image viewer is left alone. */
-:is([class^="modal_"], [class*=" modal_"]):not(:has([class*="sidebar_"])):not(:has([class*="imageWrapper_"], [class*="carousel"], video)) {
+:is([class^="modal_"], [class*=" modal_"]):not(:has([class*="sidebar_"])) {
   -webkit-backdrop-filter: blur(18px) saturate(1.2) !important;
   backdrop-filter: blur(18px) saturate(1.2) !important;
   background-color: rgba(20, 21, 25, 0.88) !important;
@@ -259,7 +259,7 @@ foreignObject:has(> .wrapper__6e9f8 > .childWrapperNoHoverBg__6e9f8 > svg) { mas
 }
 
 /* Same dense glass for dialogs built on the container + size-* wrapper (Manage Accounts, confirmations) */
-:is([class^="container_"], [class*=" container_"]):is([class*=" size-"]):not(:has([class*="sidebar_"])):not(:has([class*="imageWrapper_"], [class*="carousel"], video)) {
+:is([class^="container_"], [class*=" container_"]):is([class*=" size-"]):not(:has([class*="sidebar_"])) {
   -webkit-backdrop-filter: blur(18px) saturate(1.2) !important;
   backdrop-filter: blur(18px) saturate(1.2) !important;
   background-color: rgba(20, 21, 25, 0.88) !important;
@@ -281,3 +281,44 @@ foreignObject:has(> .wrapper__6e9f8 > .childWrapperNoHoverBg__6e9f8 > svg) { mas
 /* Vencord toggles: ON is clearly white, OFF is a dim glass pill (brand fill is a mid slate, which made them look identical) */
 .vc-switch-container { background-color: rgba(255, 255, 255, 0.16) !important; }
 .vc-switch-container.vc-switch-checked { background-color: var(--sumi-accent) !important; }
+
+/* Discord's green (Join buttons, success banners, "Reconnect") -> white with dark text, like the rest of the accents */
+:root, .theme-dark, .theme-darker {
+  --status-positive-background: var(--sumi-accent);
+  --status-positive-text: #0e0f11;
+  --button-positive-background: var(--sumi-accent);
+  --button-positive-background-hover: var(--sumi-accent-hi);
+  --button-positive-text: #0e0f11;
+}
+button:is([class*=" colorGreen_"], [class^="colorGreen_"]) { background-color: var(--sumi-accent) !important; color: #0e0f11 !important; }
+button:is([class*=" colorGreen_"], [class^="colorGreen_"]):hover { background-color: var(--sumi-accent-hi) !important; }
+:root, .theme-dark, .theme-darker {
+  --notice-background-positive: rgba(255, 255, 255, 0.16);
+  --notice-text-positive: #f2f3f5;
+  --toast-success-background: rgba(255, 255, 255, 0.14);
+  --toast-success-border: rgba(255, 255, 255, 0.4);
+  --badge-success-background: var(--sumi-accent);
+  --badge-success-text: #0e0f11;
+}
+:root, .theme-dark, .theme-darker {
+  --control-connected-background-default: var(--sumi-accent);
+  --control-connected-background-hover: var(--sumi-accent-hi);
+  --control-connected-background-active: #d5d8df;
+  --control-connected-border-default: rgba(255, 255, 255, 0.45);
+  --control-connected-border-hover: #ffffff;
+  --control-connected-border-active: #ffffff;
+}
+
+/* Inbox, pinned messages and the threads browser: Discord paints these solid gray; match the other popups */
+:is(
+  [class^="messagesPopoutWrap_"], [class*=" messagesPopoutWrap_"],
+  [class^="browser_"], [class*=" browser_"],
+  [class*="widerInbox"]
+) {
+  -webkit-backdrop-filter: blur(18px) saturate(1.2) !important;
+  backdrop-filter: blur(18px) saturate(1.2) !important;
+  background-color: rgba(20, 21, 25, 0.86) !important;
+  border: 1px solid var(--sumi-edge);
+  border-radius: 12px;
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.5);
+}

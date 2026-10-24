@@ -32,4 +32,4 @@ This joins `src/sumi.tpl.css`, `src/naat.css` and the two images in `src/assets/
 ## Credits
 
 - Server list and folder layout: [NotAnotherAnimeTheme](https://github.com/puckzxz/NotAnotherAnimeTheme) by puckzxz (Unlicense). `src/naat.css` is a pinned copy of its v3 build.
-- Wallpaper: found on Pinterest, artist unknown. If you know who made it, open an issue and I'll credit them.
+- Wallpaper and home icon (a black hole render): both found on Pinterest, artists unknown. If you know who made them, open an issue and I'll credit them.

@@ -277,3 +277,7 @@ foreignObject:has(> .wrapper__6e9f8 > .childWrapperNoHoverBg__6e9f8 > svg) { mas
   border-radius: 12px;
   box-shadow: 0 10px 34px rgba(0, 0, 0, 0.5);
 }
+
+/* Vencord toggles: ON is clearly white, OFF is a dim glass pill (brand fill is a mid slate, which made them look identical) */
+.vc-switch-container { background-color: rgba(255, 255, 255, 0.16) !important; }
+.vc-switch-container.vc-switch-checked { background-color: var(--sumi-accent) !important; }

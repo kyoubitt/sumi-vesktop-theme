@@ -1,0 +1,279 @@
+/**
+ * @name sumi
+ * @author zerda
+ * @version 1.0.0
+ * @description Ink wallpaper, green glass. Self-contained: no remote imports, wallpaper is embedded.
+ */
+
+/* ---- Server list + folders: NotAnotherAnimeTheme v3 base, vendored (pinned copy, nothing fetched) ---- */
+:root {
+  --theme-background-image: var(--sumi-wall);
+  --main-theme-color: #eceef2;
+  --theme-transparency: transparent;
+  --home-icon-image: url("__HOME__");
+  --home-icon-image-position: center center;
+  --home-icon-image-zoom: 100%;
+  --server-listing-width: 126px;
+  --font-size: 100%;
+  --message-box-transparency: rgba(12, 13, 15, 0.62);
+  --unread-server-animation: none;
+  --category-hover-color: #ffffff;
+  --member-listing-role-color: #d6d8de;
+  --folder-background-color: rgba(255, 255, 255, 0.08);
+  --expanded-folder-background-color: transparent;
+  --scrollbar-color: rgba(255, 255, 255, 0.22);
+  --unread-text-channel-bubble-color: #eceef2;
+  --mention-color: rgba(250, 166, 26, 0.05);
+  --mention-sider: rgba(250, 166, 26, 1);
+  --mention-hover-color: rgba(250, 166, 26, 0.08);
+  --code-markup-background-color: rgba(0, 0, 0, 0.5);
+  --embed-background-transparency: rgba(0, 0, 0, 0.45);
+  --context-menu-transparency: rgba(18, 19, 22, 0.92);
+}
+__NAAT__
+
+
+:root {
+  --sumi-accent: #eceef2;
+  --sumi-accent-hi: #ffffff;
+  /* Discord paints bot tags etc. with brand fill + white text, so brand fills must stay mid-tone, never white */
+  --sumi-brand-fill: #717784;
+  --sumi-brand-fill-hover: #838a98;
+  --sumi-accent-dim: rgba(255, 255, 255, 0.10);
+  --sumi-glass: rgba(24, 25, 28, 0.58);
+  --sumi-glass-deep: rgba(12, 13, 15, 0.70);
+  --sumi-edge: rgba(255, 255, 255, 0.11);
+  --sumi-text: #eeeff1;
+  --sumi-muted: #9a9ca3;
+  --sumi-radius: 12px;
+  --sumi-wall: url("__WALL__");
+
+  --font-primary: "Inter", "gg sans", "Noto Sans", sans-serif;
+  --font-display: "Inter", "gg sans", "Noto Sans", sans-serif;
+
+  /* Discord's own surfaces become glass so the wallpaper shows through */
+  --background-base-lowest: var(--sumi-glass-deep);
+  --background-base-lower: var(--sumi-glass);
+  --background-base-low: var(--sumi-glass);
+  --background-surface-high: rgba(255, 255, 255, 0.06);
+  --background-surface-higher: rgba(255, 255, 255, 0.09);
+  --background-surface-highest: rgba(255, 255, 255, 0.13);
+  --chat-background-default: transparent;
+
+  /* brand blurple -> moss green */
+  --brand-500: var(--sumi-brand-fill);
+  --brand-560: var(--sumi-accent-hi);
+  --brand-360: var(--sumi-accent-hi);
+  --brand-experiment: var(--sumi-brand-fill);
+  --text-brand: var(--sumi-accent-hi);
+
+  --text-default: var(--sumi-text);
+  --channels-default: var(--sumi-muted);
+  --scrollbar-thin-thumb: rgba(255, 255, 255, 0.22);
+}
+
+/* Wallpaper: painted once on the root, everything above it is transparent glass.
+   Discord hashes class names (chat_f75fb0), so match the stable prefix exactly. */
+html, body { background: #0a0a0b !important; }
+#app-mount {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.48)),
+    var(--sumi-wall) center / cover no-repeat !important;
+}
+:is([class^="bg_"], [class*=" bg_"]),
+:is([class^="app_"], [class*=" app_"]),
+:is([class^="layers_"], [class*=" layers_"]),
+:is([class^="layer_"], [class*=" layer_"]),
+:is([class^="chatContent_"], [class*=" chatContent_"]) { background: transparent !important; }
+
+/* Glass panels */
+nav:is([class^="wrapper_"], [class*=" wrapper_"]),
+:is([class^="sidebar_"], [class*=" sidebar_"]),
+:is([class^="panels_"], [class*=" panels_"]),
+:is([class^="membersWrap_"], [class*=" membersWrap_"]),
+:is([class^="chat_"], [class*=" chat_"]) {
+  background: var(--sumi-glass);
+  -webkit-backdrop-filter: blur(7px) saturate(1.2);
+  backdrop-filter: blur(7px) saturate(1.2);
+}
+:is([class^="chat_"], [class*=" chat_"]) { border-left: 1px solid var(--sumi-edge); }
+
+/* Selected channel / DM */
+[class*="modeSelected_"] { background: var(--sumi-accent-dim) !important; box-shadow: inset 2px 0 0 rgba(255, 255, 255, 0.7); }
+[class*="interactive_"]:hover { background: rgba(255, 255, 255, 0.07); }
+
+/* Message box */
+[class*="channelTextArea_"] {
+  background: var(--sumi-glass-deep);
+  border: 1px solid var(--sumi-edge);
+  border-radius: var(--sumi-radius);
+}
+
+
+/* System font (Maple Mono NF CN, same as GTK + ghostty) */
+:root {
+  --sumi-font: "Maple Mono NF CN", "Maple Mono NF", "Adwaita Mono", "DejaVu Sans", "Inter", monospace;
+  --font-primary: var(--sumi-font);
+  --font-display: var(--sumi-font);
+  --font-headline: var(--sumi-font);
+  --font-code: var(--sumi-font);
+}
+body, button, input, textarea, select { font-family: var(--sumi-font); }
+
+/* User profile panel (right side of DMs): same glass as the rest */
+:is([class^="aside_"], [class*=" aside_"]) {
+  background: transparent;
+  padding: 8px;
+}
+:is([class^="outer_"], [class*=" outer_"]) {
+  background: var(--sumi-glass) !important;
+  -webkit-backdrop-filter: blur(7px) saturate(1.2);
+  backdrop-filter: blur(7px) saturate(1.2);
+  border: 1px solid var(--sumi-edge);
+  border-radius: var(--sumi-radius);
+  overflow: hidden;
+}
+:is([class^="outer_"], [class*=" outer_"]) :is([class^="inner_"], [class*=" inner_"]),
+:is([class^="outer_"], [class*=" outer_"]) :is([class^="overlay_"], [class*=" overlay_"]) { background: transparent !important; }
+:is([class^="redesignFooter_"], [class*=" redesignFooter_"]) button {
+  background: var(--sumi-accent-dim);
+  border: 1px solid var(--sumi-edge);
+  border-radius: 10px;
+}
+
+/* BetterFolders second server column: reserve the full NAAT list width so the channel list isn't overlapped */
+.vc-betterFolders-sidebar-grid {
+  grid-template-columns: [start] min-content [guildsEnd] var(--server-listing-width) [sidebarEnd] min-content [channelsEnd] 1fr [end] !important;
+}
+
+
+/* Performance: no backdrop blur anywhere (every blurred panel re-blurs the wallpaper each frame).
+   Glass is a bit more opaque instead so text stays readable. */
+*, *::before, *::after { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+:root {
+  --sumi-glass: rgba(24, 25, 28, 0.60);
+  --sumi-glass-deep: rgba(12, 13, 15, 0.74);
+}
+
+/* Title bar: dark glass like the panels, so the wallpaper's gray sky doesn't show through it */
+:is([class^="bar_"], [class*=" bar_"]):has(:is([class^="title_"], [class*=" title_"])):not(:has([class*="chat_"])) {
+  background: var(--sumi-glass-deep) !important;
+  border-bottom: 1px solid var(--sumi-edge);
+}
+
+/* Spotify controls in the user panel */
+:is([class^="panels_"], [class*=" panels_"]) > div:not([class]):has(.vc-spotify-button-row) {
+  background: var(--sumi-glass-deep) !important;
+  border-bottom: 1px solid var(--sumi-edge);
+}
+.vc-spotify-button { color: var(--sumi-text); }
+.vc-spotify-button:hover { background: var(--sumi-accent-dim); }
+.vc-spotify-button.vc-spotify-shuffle, .vc-spotify-button.vc-spotify-repeat { background: var(--sumi-accent-dim); }
+
+/* Remaining blurple (player progress, primary buttons) -> accent green */
+:root {
+  --background-brand: var(--sumi-brand-fill);
+  --background-brand-hover: var(--sumi-brand-fill-hover);
+  --button-filled-brand-background: var(--sumi-brand-fill);
+  --button-filled-brand-background-hover: var(--sumi-brand-fill-hover);
+}
+:is([class^="barFill_"], [class*=" barFill_"]) { background-color: var(--sumi-accent) !important; }
+button:is([class*=" primary_"], [class^="primary_"]) { background-color: var(--sumi-accent) !important; color: #0e0f11; }
+button:is([class*=" primary_"], [class^="primary_"]):hover { background-color: var(--sumi-accent-hi) !important; }
+
+
+/* Settings + every other modal: dark glass over the wallpaper itself.
+   (No blur, so a see-through modal would just show the dimmed app behind it.) */
+:is([class^="modal_"], [class*=" modal_"]):has([class*="sidebar_"]) {
+  background:
+    linear-gradient(var(--sumi-glass-deep), var(--sumi-glass-deep)),
+    var(--sumi-wall) center / cover no-repeat !important;
+  border: 1px solid var(--sumi-edge);
+  border-radius: 14px;
+  overflow: hidden;
+}
+:is([class^="modal_"], [class*=" modal_"]) :is([class*="theme-darker"], [class*="theme-dark"]):not([class*="sidebar_"]),
+:is([class^="modal_"], [class*=" modal_"]) :is([class^="content_"], [class*=" content_"]),
+:is([class^="modal_"], [class*=" modal_"]) :is([class^="contentRegion_"], [class*=" contentRegion_"]) { background: transparent !important; }
+:is([class^="modal_"], [class*=" modal_"]) :is([class^="sidebar_"], [class*=" sidebar_"]) { background: rgba(255, 255, 255, 0.04) !important; border-right: 1px solid var(--sumi-edge); }
+
+/* Home button: circle, white ring, lifts on hover */
+.listItemWrapper__91816 .wrapper_cc5dd2 .wrapper__6e9f8 .childWrapper__6e9f8.childWrapperNoHoverBg__6e9f8:has(> svg) {
+  border-radius: 50% !important;
+  background-size: cover !important;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.38), 0 5px 14px rgba(0, 0, 0, 0.55);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.listItemWrapper__91816 .wrapper_cc5dd2 .wrapper__6e9f8:hover .childWrapper__6e9f8.childWrapperNoHoverBg__6e9f8:has(> svg) {
+  transform: scale(1.07);
+  box-shadow: 0 0 0 2px var(--sumi-accent-hi), 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+/* Expanded folder strip: neutral instead of the folder's own blue */
+:is([class^="folderGroupBackground_"], [class*=" folderGroupBackground_"]) { background: rgba(255, 255, 255, 0.07) !important; }
+
+/* "Add Friend" tab */
+:is([class*=" addFriend_"], [class^="addFriend_"]):not([class*="selected_"]) { background-color: var(--sumi-accent) !important; color: #0e0f11 !important; }
+foreignObject:has(> .wrapper__6e9f8 > .childWrapperNoHoverBg__6e9f8 > svg) { mask: none !important; }
+
+
+
+
+/* Floating surfaces. Exact surfaces only: Discord wraps these in sizing/position layers that must stay untouched. */
+:is(
+  [class^="menu_"], [class*=" menu_"],
+  [class^="tooltip_"], [class*=" tooltip_"],
+  [class*="layerContainer"] :is([class^="outer_"], [class*=" outer_"]):not(:is([class^="modal_"], [class*=" modal_"]) *),
+  :is([class^="drawerSizingWrapper_"], [class*=" drawerSizingWrapper_"]) > :is([class^="contentWrapper_"], [class*=" contentWrapper_"])
+) {
+  -webkit-backdrop-filter: blur(18px) saturate(1.2) !important;
+  backdrop-filter: blur(18px) saturate(1.2) !important;
+  background-color: rgba(20, 21, 25, 0.84) !important;
+  border: 1px solid var(--sumi-edge);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.5);
+}
+:is([class^="positionContainer_"], [class*=" positionContainer_"], [class^="positionLayer_"], [class*=" positionLayer_"]) {
+  background: transparent !important; border: 0 !important; box-shadow: none !important;
+  -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+}
+
+/* Message hover toolbar pill */
+:is([class^="buttonsInner_"], [class*=" buttonsInner_"]) {
+  -webkit-backdrop-filter: blur(14px) saturate(1.2) !important;
+  backdrop-filter: blur(14px) saturate(1.2) !important;
+  background-color: rgba(20, 21, 25, 0.72) !important;
+  border: 1px solid var(--sumi-edge);
+}
+/* the profile card's inner layers shouldn't stack backgrounds inside a popout */
+[class*="layerContainer"] :is([class^="outer_"], [class*=" outer_"]) :is([class^="inner_"], [class*=" inner_"], [class^="overlay_"], [class*=" overlay_"]) { background: transparent !important; }
+
+/* Every other modal (Manage Accounts, confirmations, forms): dense blurred glass.
+   The settings window (has the sidebar) keeps its wallpaper treatment; the image viewer is left alone. */
+:is([class^="modal_"], [class*=" modal_"]):not(:has([class*="sidebar_"])):not(:has([class*="imageWrapper_"], [class*="carousel"], video)) {
+  -webkit-backdrop-filter: blur(18px) saturate(1.2) !important;
+  backdrop-filter: blur(18px) saturate(1.2) !important;
+  background-color: rgba(20, 21, 25, 0.88) !important;
+  border: 1px solid var(--sumi-edge);
+  border-radius: 14px;
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.55);
+}
+
+/* Same dense glass for dialogs built on the container + size-* wrapper (Manage Accounts, confirmations) */
+:is([class^="container_"], [class*=" container_"]):is([class*=" size-"]):not(:has([class*="sidebar_"])):not(:has([class*="imageWrapper_"], [class*="carousel"], video)) {
+  -webkit-backdrop-filter: blur(18px) saturate(1.2) !important;
+  backdrop-filter: blur(18px) saturate(1.2) !important;
+  background-color: rgba(20, 21, 25, 0.88) !important;
+  border: 1px solid var(--sumi-edge);
+  border-radius: 14px;
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.55);
+}
+
+/* Composer autocomplete (:emoji, @mentions, #channels, /commands) */
+:is([class^="autocomplete_"], [class*=" autocomplete_"]) {
+  -webkit-backdrop-filter: blur(18px) saturate(1.2) !important;
+  backdrop-filter: blur(18px) saturate(1.2) !important;
+  background-color: rgba(20, 21, 25, 0.88) !important;
+  border: 1px solid var(--sumi-edge);
+  border-radius: 12px;
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.5);
+}

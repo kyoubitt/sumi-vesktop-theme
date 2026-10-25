@@ -223,6 +223,8 @@ foreignObject:has(> .wrapper__6e9f8 > .childWrapperNoHoverBg__6e9f8 > svg) { mas
 :is(
   [class^="menu_"], [class*=" menu_"],
   [class^="tooltip_"], [class*=" tooltip_"],
+  [class^="popover_"], [class*=" popover_"],
+  [class^="reactionTooltip_"], [class*=" reactionTooltip_"], [class^="reactionTooltipInner"], [class*=" reactionTooltipInner"], [class^="burstReactionTooltipInner"], [class*=" burstReactionTooltipInner"],
   [class*="layerContainer"] :is([class^="outer_"], [class*=" outer_"]):not(:is([class^="modal_"], [class*=" modal_"]) *),
   :is([class^="drawerSizingWrapper_"], [class*=" drawerSizingWrapper_"]) > :is([class^="contentWrapper_"], [class*=" contentWrapper_"])
 ) {
@@ -321,4 +323,18 @@ button:is([class*=" colorGreen_"], [class^="colorGreen_"]):hover { background-co
   border: 1px solid var(--sumi-edge);
   border-radius: 12px;
   box-shadow: 0 10px 34px rgba(0, 0, 0, 0.5);
+}
+
+/* Catch-all for any floating surface not named above: whatever Discord puts directly inside a popup's position wrapper
+   gets the same dense blurred glass, so a popup type nobody has styled yet can never come out see-through or solid gray. */
+[class*="layerContainer"] :is([class^="positionContainer_"], [class*=" positionContainer_"]) > :is(div, section, [role="dialog"], [role="menu"], [role="listbox"]):not([class*="carouselModal"]) {
+  -webkit-backdrop-filter: blur(18px) saturate(1.2) !important;
+  backdrop-filter: blur(18px) saturate(1.2) !important;
+  background-color: rgba(20, 21, 25, 0.86) !important;
+}
+
+/* Popout layer: Discord paints every popover (search, threads list, pickers) with --background-surface-high, which the theme
+   makes a faint 6% white. Inside the popout layer it becomes the same dense dark glass instead. */
+[class*="layerContainer"] [class*="layer__"] {
+  --background-surface-high: rgba(20, 21, 25, 0.88);
 }

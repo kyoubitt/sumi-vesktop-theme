@@ -306,6 +306,9 @@ button:is([class*=" colorGreen_"], [class^="colorGreen_"]):hover { background-co
   --control-connected-background-default: var(--sumi-accent);
   --control-connected-background-hover: var(--sumi-accent-hi);
   --control-connected-background-active: #d5d8df;
+  --control-connected-text-default: #0e0f11;
+  --control-connected-text-hover: #0e0f11;
+  --control-connected-text-active: #0e0f11;
   --control-connected-border-default: rgba(255, 255, 255, 0.45);
   --control-connected-border-hover: #ffffff;
   --control-connected-border-active: #ffffff;
@@ -337,4 +340,6 @@ button:is([class*=" colorGreen_"], [class^="colorGreen_"]):hover { background-co
    makes a faint 6% white. Inside the popout layer it becomes the same dense dark glass instead. */
 [class*="layerContainer"] [class*="layer__"] {
   --background-surface-high: rgba(20, 21, 25, 0.88);
+  --background-surface-highest: rgba(20, 21, 25, 0.9);
+  --background-base-lower: rgba(12, 13, 15, 0.9);
 }

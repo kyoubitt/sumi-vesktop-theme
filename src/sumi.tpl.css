@@ -178,7 +178,8 @@ body, button, input, textarea, select { font-family: var(--sumi-font); }
   --button-filled-brand-background-hover: var(--sumi-brand-fill-hover);
 }
 :is([class^="barFill_"], [class*=" barFill_"]) { background-color: var(--sumi-accent) !important; }
-button:is([class*=" primary_"], [class^="primary_"]) { background-color: var(--sumi-accent) !important; color: #0e0f11; }
+button:is([class*=" primary_"], [class^="primary_"]) { background-color: var(--sumi-accent) !important; color: #0e0f11 !important; }
+button:is([class*=" primary_"], [class^="primary_"]) :is([class*="contents_"], [class*="text_"]) { color: inherit !important; }
 button:is([class*=" primary_"], [class^="primary_"]):hover { background-color: var(--sumi-accent-hi) !important; }
 
 
@@ -291,6 +292,13 @@ foreignObject:has(> .wrapper__6e9f8 > .childWrapperNoHoverBg__6e9f8 > svg) { mas
   --button-positive-background: var(--sumi-accent);
   --button-positive-background-hover: var(--sumi-accent-hi);
   --button-positive-text: #0e0f11;
+  --control-primary-background-default: var(--sumi-accent);
+  --control-primary-background-hover: var(--sumi-accent-hi);
+  --control-primary-background-active: #d5d8df;
+  --control-primary-border-default: rgba(255, 255, 255, 0.45);
+  --control-primary-text-default: #0e0f11;
+  --control-primary-text-hover: #0e0f11;
+  --control-primary-text-active: #0e0f11;
 }
 button:is([class*=" colorGreen_"], [class^="colorGreen_"]) { background-color: var(--sumi-accent) !important; color: #0e0f11 !important; }
 button:is([class*=" colorGreen_"], [class^="colorGreen_"]):hover { background-color: var(--sumi-accent-hi) !important; }
@@ -340,6 +348,52 @@ button:is([class*=" colorGreen_"], [class^="colorGreen_"]):hover { background-co
    makes a faint 6% white. Inside the popout layer it becomes the same dense dark glass instead. */
 [class*="layerContainer"] [class*="layer__"] {
   --background-surface-high: rgba(20, 21, 25, 0.88);
+  --background-surface-higher: rgba(20, 21, 25, 0.9);
   --background-surface-highest: rgba(20, 21, 25, 0.9);
   --background-base-lower: rgba(12, 13, 15, 0.9);
+}
+
+/* Select dropdowns (search filters, settings) render inline rather than in the popout layer */
+:is([class^="selectDropdown_"], [class*=" selectDropdown_"]) {
+  -webkit-backdrop-filter: blur(18px) saturate(1.2) !important;
+  backdrop-filter: blur(18px) saturate(1.2) !important;
+  background-color: rgba(20, 21, 25, 0.92) !important;
+}
+
+/* Multi-select checkboxes (search filters): checked is the brand fill, which modal scopes re-declared as blurple */
+:is([class^="multiSelectCheckbox_"], [class*=" multiSelectCheckbox_"]):is([class*="checked_"]):not([class*="unchecked_"]) {
+  background: var(--sumi-brand-fill) !important; border-color: var(--sumi-brand-fill) !important;
+}
+
+/* Text-only buttons ("Clear Filters") also carry a primary_ class; keep them flat links, not filled buttons */
+button:is([class*=" textButton_"], [class^="textButton_"]):is([class*=" primary_"], [class^="primary_"]) {
+  background-color: transparent !important; color: var(--sumi-accent-hi) !important; border-color: transparent !important;
+}
+button:is([class*=" textButton_"], [class^="textButton_"]):is([class*=" primary_"], [class^="primary_"]):hover { text-decoration: underline; }
+
+/* Profiles with a light custom theme carry theme-light, which flips every text color dark. Our popout glass is dark, so keep the dark-theme text colors. */
+.custom-user-profile-theme.theme-light {
+  --channels-default: #9a9ca3;
+  --icon-default: color-mix(in oklab,hsl(240 calc(1*6.667%) 94.118%/1) 100%,#000 0%);
+  --icon-muted: color-mix(in oklab,hsl(232.5 calc(1*3.96%) 60.392%/1) 100%,#000 0%);
+  --icon-strong: color-mix(in oklab,hsl(0 calc(1*0%) 98.431%/1) 100%,#000 0%);
+  --icon-subtle: color-mix(in oklab,hsl(231.429 calc(1*4.348%) 68.431%/1) 100%,#000 0%);
+  --interactive-icon-active: color-mix(in oklab,hsl(0 calc(1*0%) 98.431%/1) 100%,#000 0%);
+  --interactive-icon-default: color-mix(in oklab,hsl(231.429 calc(1*4.348%) 68.431%/1) 100%,#000 0%);
+  --interactive-icon-hover: color-mix(in oklab,hsl(0 calc(1*0%) 98.431%/1) 100%,#000 0%);
+  --interactive-muted: color-mix(in oklab,hsl(234.545 calc(1*6.509%) 33.137%/1) 100%,#000 0%);
+  --interactive-text-active: color-mix(in oklab,hsl(0 calc(1*0%) 98.431%/1) 100%,#000 0%);
+  --interactive-text-default: color-mix(in oklab,hsl(231.429 calc(1*4.348%) 68.431%/1) 100%,#000 0%);
+  --interactive-text-hover: color-mix(in oklab,hsl(0 calc(1*0%) 98.431%/1) 100%,#000 0%);
+  --text-brand: #ffffff;
+  --text-default: #eeeff1;
+  --text-feedback-critical: color-mix(in oklab,hsl(1.905 calc(1*90%) 72.549%/1) 100%,#000 0%);
+  --text-feedback-info: color-mix(in oklab,hsl(213.191 calc(1*85.455%) 67.647%/1) 100%,#000 0%);
+  --text-feedback-positive: color-mix(in oklab,hsl(138.837 calc(1*36.441%) 53.725%/1) 100%,#000 0%);
+  --text-feedback-warning: color-mix(in oklab,hsl(38.974 calc(1*100%) 45.882%/1) 100%,#000 0%);
+  --text-invert: color-mix(in oklab,hsl(230 calc(1*6%) 19.608%/1) 100%,#000 0%);
+  --text-link: color-mix(in oklab,hsl(212.795 calc(1*82.564%) 61.765%/1) 100%,#000 0%);
+  --text-muted: color-mix(in oklab,hsl(232.5 calc(1*3.96%) 60.392%/1) 100%,#000 0%);
+  --text-strong: color-mix(in oklab,hsl(0 calc(1*0%) 98.431%/1) 100%,#000 0%);
+  --text-subtle: color-mix(in oklab,hsl(231.429 calc(1*4.348%) 68.431%/1) 100%,#000 0%);
 }
